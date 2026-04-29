@@ -7,7 +7,7 @@ SRC_URI = "git://github.com/pboettch/json-schema-validator;branch=main;protocol=
 
 SRCREV = "c780404a84dd9ba978ba26bc58d17cb43fa7bc80"
 
-S = "${WORKDIR}/git"
+#S = "${WORKDIR}/git"
 
 DEPENDS += "nlohmann-json"
 

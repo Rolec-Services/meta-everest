@@ -9,6 +9,6 @@ SRC_URI = "git://github.com/LiamBindle/MQTT-C;protocol=http;branch=master;protoc
 
 SRCREV = "f69ce1e7fd54f3b1834c9c9137ce0ec5d703cb4d"
 
-S = "${WORKDIR}/git"
+#S = "${WORKDIR}/git"
 
 inherit cmake

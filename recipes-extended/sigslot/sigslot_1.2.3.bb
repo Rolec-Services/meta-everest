@@ -8,7 +8,8 @@ SRC_URI = "git://github.com/palacaze/sigslot.git;branch=master;protocol=https \
 
 SRCREV = "b588b791b9cf7eb17ff0a74d8aebd4a61166c2e1"
 
-S = "${WORKDIR}/git"
+# AM
+#S = "${WORKDIR}/git"
 
 inherit cmake
 

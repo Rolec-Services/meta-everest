@@ -5,7 +5,8 @@ SRC_URI = "git://github.com/EVerest/everest-cmake.git;branch=main;protocol=https
 
 SRCREV = "e378100829014ad4c3a721a7aa1c02ef56736c61"
 
-S = "${WORKDIR}/git"
+# AM
+#S = "${WORKDIR}/git"
 
 do_install() {
     install -d ${D}/usr/lib/cmake/everest-cmake

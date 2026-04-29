@@ -63,11 +63,11 @@ inherit npm
 
 DEPENDS = "node-red"
 
-SRC_URI = "file://package.json \
+SRC_URI = "file://package.json;subdir=npm \
            npmsw://${THISDIR}/${BPN}/everest-node-red-flows-npm-shrinkwrap.json \
-           file://flows.json \
+           file://flows.json;subdir=npm \
           "
-S = "${WORKDIR}"
+S = "${WORKDIR}/npm"
 
 FILES:${PN} += "/home/root/.node-red/flows.json \
                /home/root/.node-red/node_modules/*"

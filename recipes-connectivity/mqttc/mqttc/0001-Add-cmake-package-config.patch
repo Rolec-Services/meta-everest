@@ -2,6 +2,7 @@ From 4005fc695bd71557ddec69fe5b540c3035afc75a Mon Sep 17 00:00:00 2001
 From: aw <aw@pionix.de>
 Date: Wed, 3 Aug 2022 09:34:48 +0200
 Subject: [PATCH] Add cmake package config
+Upstream-Status: Pending
 
 ---
  CMakeLists.txt  | 38 ++++++++++++++++++++++++++++++++++++--
