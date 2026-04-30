@@ -30,9 +30,14 @@ DEPENDS:append = " python3-installer-native"
 INSTALL_WHEEL_COMPILE_BYTECODE ?= "--compile-bytecode=0"
 
 pypi_wheel_do_install() {
+  wheel_path="${UNPACKDIR}/${PYPI_WHEEL_NAME}"
+  if [ ! -f "${wheel_path}" ]; then
+    wheel_path="${WORKDIR}/${PYPI_WHEEL_NAME}"
+  fi
+
     nativepython3 -m installer ${INSTALL_WHEEL_COMPILE_BYTECODE} \
     --interpreter "${USRBINPATH}/env python3" \
-    --destdir=${D} ${WORKDIR}/${PYPI_WHEEL_NAME}
+  --destdir=${D} ${wheel_path}
 }
 
 EXPORT_FUNCTIONS do_install

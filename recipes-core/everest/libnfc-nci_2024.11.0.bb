@@ -6,8 +6,6 @@ SRC_URI = "git://github.com/EVerest/linux_libnfc-nci.git;branch=everest;protocol
 
 inherit cmake
 
-#S = "${WORKDIR}/git"
-
 SRCREV = "65276f9221cd2a50dbe4bc22e34879387b5800be"
 
 DEPENDS = "\
@@ -15,3 +13,6 @@ DEPENDS = "\
 "
 
 EXTRA_OECMAKE += "-DDISABLE_EDM=ON"
+
+# AM: Workaround to disable QA issue
+INSANE_SKIP:${PN}-dev += "buildpaths"
